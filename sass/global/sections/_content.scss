@@ -1,0 +1,237 @@
+/* Content
+ * ========================================================================== */
+ 
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Entries
+--------------------------------------------- */
+.entry {
+	
+}
+.entry-content ol,
+.entry-content ul {
+	margin-bottom: 28px;
+	margin-left: 40px;
+}
+.entry-content ol > li {
+	list-style-type: decimal;
+}
+.entry-content ul > li {
+	list-style-type: disc;
+}
+.entry-content ol ol,
+.entry-content ul ul {
+	margin-bottom: 0;
+}
+.entry-content code {
+	background-color: #333;
+	color: #eee;
+}
+
+/* ## Entry Meta
+--------------------------------------------- */
+p.entry-meta {
+	font-size: 16px;
+	margin-bottom: 0;
+}
+.entry-header .entry-meta {
+	margin-bottom: 24px;
+}
+.entry-footer .entry-meta {
+	border-top: 1px solid #eee;
+	padding-top: 24px;
+}
+.entry-categories,
+.entry-tags {
+	display: block;
+}
+.entry-comments-link::before {
+	content: "\2014";
+	margin: 0 6px 0 2px;
+}
+
+/* ## Pagination
+--------------------------------------------- */
+.pagination {
+	clear: both;
+	margin: 40px 0;
+}
+.adjacent-entry-pagination {
+	margin-bottom: 0;
+}
+.archive-pagination li {
+	display: inline;
+}
+.archive-pagination a {
+	background-color: #fff;
+	color: #333;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 8px 12px;
+	text-decoration: none;
+}
+.archive-pagination a:hover,
+.archive-pagination a:focus,
+.archive-pagination .active a {
+	background-color: #c3251d;
+	color: #fff;
+}
+
+/* ## Comments
+--------------------------------------------- */
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	background-color: #fff;
+	font-size: 16px;
+	margin-bottom: 40px;
+}
+.comment-respond,
+.entry-pings {
+	padding: 60px 60px 32px;
+}
+.entry-comments {
+	padding: 60px;
+}
+.comment-list li {
+	padding: 40px 0 0 30px;
+}
+.comment-list .depth-1 {
+	padding-left: 0;
+}
+.comment-header {
+	margin-bottom: 30px;
+}
+.comment-content {
+	clear: both;
+}
+.comment-content ul > li {
+	list-style-type: disc;
+}
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+	width: 50%;
+}
+.comment-respond label {
+	display: block;
+	margin-right: 12px;
+}
+.comment-header p {
+	margin-bottom: 0;
+}
+.entry-pings .reply {
+	display: none;
+}
+
+/* ## Sections
+--------------------------------------------- */
+.vc_row {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.vc_row .vc_inner {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.vc_row.-hero {
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+.vc_row.-banner {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+@media only screen and (min-width: 38.4em) {
+	.vc_row.-hero {
+		padding-top: 80px;
+		padding-bottom: 50px;
+	}
+}
+@media only screen and (min-width: 74.8em) {
+	.vc_row.-fixbg {
+		background-attachment: fixed;
+	}
+	.vc_row.-hero {
+		padding-top: 100px;
+		padding-bottom: 70px;
+	}
+}
+@media only screen and (min-width: 80.0em) {
+	.vc_row.-hero {
+		padding-top: 120px;
+		padding-bottom: 90px;
+	}
+}
+@media only screen and (min-width: 107.2em) {
+	.vc_row.-hero {
+		padding-top: 140px;
+		padding-bottom: 110px;
+	}
+}
+
+/* ## Visual Composer Elements
+--------------------------------------------- */
+.vc_row .wpb_content_element {
+	margin-bottom: 30px;
+}
+.vc_row.-dark .wpb_content_element {
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.vc_row.-dark a {
+	color: #eb610c;
+}
+.vc_row.-dark a:hover,
+.vc_row.-dark a:focus {
+	color: #fff;
+}
+.vc_row.-dark input[type="text"],
+.vc_row.-dark input[type="password"],
+.vc_row.-dark input[type="email"],
+.vc_row.-dark input[type="url"],
+.vc_row.-dark input[type="tel"],
+.vc_row.-dark input[type="number"],
+.vc_row.-dark input[type="date"],
+.vc_row.-dark textarea,
+.vc_row.-dark select {
+	border-top: 1px solid rgba(0, 0, 0, 0.25);
+	color: #ddd;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+.vc_row.-dark input[type="text"]:focus,
+.vc_row.-dark input[type="password"]:focus,
+.vc_row.-dark input[type="email"]:focus,
+.vc_row.-dark input[type="url"]:focus,
+.vc_row.-dark input[type="tel"]:focus,
+.vc_row.-dark input[type="number"]:focus,
+.vc_row.-dark input[type="date"]:focus,
+.vc_row.-dark textarea:focus,
+.vc_row.-dark select:focus {
+	color: #fff;
+	box-shadow: 0 0 0 2px #fff;
+}
+.vc_row.-dark button,
+.vc_row.-dark input[type="submit"] {
+	color: #fff;
+	background-color: #eb610c;
+}
+.vc_row.-dark button:hover,
+.vc_row.-dark button:focus,
+.vc_row.-dark input[type="submit"]:hover,
+.vc_row.-dark input[type="submit"]:focus {
+	color: #333;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+.vc_row.-dark button:active,
+.vc_row.-dark input[type="submit"]:active {
+	color: #333;
+	background-color: #fff;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "genesium",
+  "version": "1.0.0",
+  "description": "Genesium is a Wordpress theme for the Genesis Framework.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acbeaumo/Genesium.git"
+  },
+  "author": "Andrew Beaumont <acbeaumo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acbeaumo/Genesium/issues"
+  },
+  "homepage": "https://github.com/acbeaumo/Genesium#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-compass": "^2.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

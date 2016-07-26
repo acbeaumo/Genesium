@@ -1,0 +1,55 @@
+/* Configuration
+   ========================================================================== */
+   
+/* Vertical rhythm
+ * http://compass-style.org/reference/compass/typography/vertical_rhythm/
+ * http://zellwk.com/blog/compass-vertical-rhythm/
+ */
+$base-font-size: 18px;
+$base-line-height: 28px;
+$relative-font-sizing: false;
+$rhythm-unit: "rem";
+//$round-to-nearest-half-line: true;
+$debug-vertical-alignment: false;
+
+/* Media query breakpoints
+ * Values must be in pixels. Use the `breakpoint` mixin to output in ems.
+ */
+$bp-small: 384px;
+$bp-small-plus: 566px;
+$bp-medium: 748px;
+$bp-medium-plus: 810px;
+$bp-large: 872px;
+$bp-large-plus: 972px;
+$bp-ultra: 1072px;
+$bp-ultra-plus: 1176px;
+$bp-mega: 1280px;
+
+/* Fonts */
+$base-font-family: "Lato", sans-serif;
+$heading-font-family: "Montserrat", sans-serif;
+$h1-font-size: 36px;
+$h2-font-size: 30px;
+$h3-font-size: 24px;
+$h4-font-size: 20px;
+$h5-font-size: 18px;
+$h6-font-size: 16px;
+
+/* Colors */
+$base-text-color: #222;
+$primary-color: #eb610c;
+$link-color: $primary-color;
+$link-focus-color: #000;
+$selection-color: #b3d4fc;
+$body-background-color: #fff;
+$field-text-color: tint($base-text-color, 25);
+$field-focus-text-color: shade($field-text-color, 50);
+$field-background-color: rgba(0, 0, 0, 0.1);
+$field-inset-shadow-color: rgba(0, 0, 0, 0.25);
+$field-focus-outline-color: rgba(0, 0, 0, 0.35);
+$button-text-color: #fff;
+$button-focus-text-color: $button-text-color;
+$button-active-text-color: $button-text-color;
+$button-background-color: $primary-color;
+$button-focus-background-color: #666;
+$button-active-background-color: #333;

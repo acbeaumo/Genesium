@@ -1,0 +1,56 @@
+/* Helpers
+ * General-purpose classes meant to override values
+ * http://rscss.io/helpers.html
+ * ========================================================================== */
+
+._text-left {
+	text-align: left;
+}
+._text-center {
+	text-align: center;
+}
+._text-right {
+	text-align: right;
+}
+._text-xs {
+	@include adjust-font-size-to( $base-font-size * 0.85 );
+	@include breakpoint($bp-large) {
+		@include adjust-font-size-to( $base-font-size * 0.9 );
+	}
+}
+._text-s {
+	@include adjust-font-size-to( $base-font-size * 0.9 );
+	@include breakpoint($bp-large) {
+		@include adjust-font-size-to( $base-font-size );
+	}
+}
+._text-l {
+	@include adjust-font-size-to( $base-font-size * 1.1 );
+	@include breakpoint($bp-large) {
+		@include adjust-font-size-to( $base-font-size * 1.15 );
+	}
+}
+._text-xl {
+	@include adjust-font-size-to( $base-font-size * 1.25 );
+	@include breakpoint($bp-large) {
+		@include adjust-font-size-to( $base-font-size * 1.5 );
+	}
+}
+._text-xxl {
+	@include adjust-font-size-to( $base-font-size * 1.5 );
+	@include breakpoint($bp-large) {
+		@include adjust-font-size-to( $base-font-size * 2 );
+	}
+}
+._text-xxxl {
+	@include adjust-font-size-to( $base-font-size * 2 );
+	@include breakpoint($bp-large) {
+		@include adjust-font-size-to( $base-font-size * 2.5 );
+	}
+}
+._text-uppercase {
+	text-transform: uppercase;
+}
+._text-color-primary {
+	color: $primary-color;
+}

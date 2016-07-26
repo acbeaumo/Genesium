@@ -1,0 +1,41 @@
+/*!
+	Theme Name: Genesium
+	Theme URI: https://github.com/acbeaumo/Genesium
+	Author: Andrew Beaumont
+	Author URI: https://github.com/acbeaumo
+	Version: 1.0.0
+	Template: genesis
+*/
+
+@import "compass";
+
+@import "global/functions";
+
+@import "global/config";
+@import "project/config";
+
+@import "global/mixins";
+
+@import "global/normalize";
+@import "global/base";
+@import "global/print";
+
+@import "global/helpers";
+@import "global/common-classes";
+
+@import "global/layout";
+@import "global/widgets";
+@import "global/gallery";
+
+@import "global/gravity-forms";
+
+/* Patterns */
+@import "global/patterns/navigation";
+
+/* Sections */
+@import "global/sections/header";
+@import "global/sections/content";
+@import "global/sections/footer";
+
+/* Project styles */
+@import "project/style";

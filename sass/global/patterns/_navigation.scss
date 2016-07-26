@@ -1,0 +1,152 @@
+/* Navigation
+ * ========================================================================== */
+ 
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+.genesis-nav-menu {
+	clear: both;
+	text-align: center;
+	font-size: 0;
+	line-height: 1;
+}
+.genesis-nav-menu .menu-item {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+}
+.genesis-nav-menu .menu-item > a {
+	display: block;
+	padding: 12px 24px;
+	font-size: 16px;
+	color: #777;
+}
+.genesis-nav-menu .current-menu-item > a {
+	color: #eb610c;
+}
+.genesis-nav-menu .menu-item > a:hover,
+.genesis-nav-menu .menu-item > a:focus {
+	color: #000;
+}
+.genesis-nav-menu .sub-menu {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	width: 200px;
+}
+.genesis-nav-menu .sub-menu .sub-menu {
+	margin: -38px 0 0 199px;
+}
+.genesis-nav-menu .sub-menu .menu-item > a {
+	word-wrap: break-word;
+	font-size: 14px;
+	background-color: #fff;
+}
+@media only screen and (min-width: 74.8em) {
+	.genesis-nav-menu {
+		text-align: left;
+	}
+	.genesis-nav-menu .menu-item {
+		display: inline-block;
+	}
+	.genesis-nav-menu .sub-menu .menu-item {
+		display: block;
+	}
+}
+
+/* ## Menu Toggle
+--------------------------------------------- */
+.menu-toggle,
+.sub-menu-toggle {
+	display: block;
+	overflow: hidden;
+	margin: 0 auto;
+	border-width: 0;
+	text-align: center;
+	color: #777;
+	background-color: transparent;
+}
+.menu-toggle {
+	position: relative;
+	width: 100%;
+	line-height: 20px;
+	font-weight: 400;
+}
+.menu-toggle::before {
+	margin-right: 6px;
+}
+.sub-menu-toggle {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px;
+}
+.menu-toggle:hover,
+.menu-toggle:focus,
+.sub-menu-toggle:hover,
+.sub-menu-toggle:focus {
+	color: #000;
+	background-color: #f7f7f7;
+}
+.sub-menu-toggle.activated::before {
+	content: "\f142";
+}
+@media only screen and (min-width: 74.8em) {
+	.menu-toggle,
+	.sub-menu-toggle {
+		display: none;
+	}
+}
+
+/* ## Primary Navigation
+--------------------------------------------- */
+#mobile-genesis-nav-primary {
+	border: 1px solid #eee;
+	border-width: 1px 0;
+}
+#mobile-genesis-nav-primary.activated {
+	border-bottom-color: transparent;
+}
+.nav-primary {
+	display: none;
+	border-bottom: 1px solid #eee;
+}
+.nav-primary .menu-item {
+	display: block;
+}
+.nav-primary .sub-menu {
+	position: static;
+	padding-left: 12px;
+	width: 100%;
+}
+.nav-primary .sub-menu .sub-menu {
+	margin: 0;
+}
+@media only screen and (min-width: 74.8em) {
+	.nav-primary {
+		display: block;
+		border-bottom-width: 0;
+	}
+	.nav-primary .menu-item {
+		display: inline-block;
+	}
+	.nav-primary .menu-item > a {
+		padding: 19px 26px;
+	}
+	.nav-primary .menu-item > a:hover,
+	.nav-primary .menu-item > a:focus {
+		background-color: #f7f7f7;
+	}
+	.nav-primary .sub-menu {
+		position: absolute;
+		border: 1px solid #eee;
+		border-width: 1px 0;
+		padding-left: 0;
+		width: 200px;
+	}
+	.nav-primary .sub-menu .sub-menu {
+		margin: -38px 0 0 199px;
+	}
+	.nav-primary .sub-menu .menu-item > a {
+		padding: 12px 26px;
+	}
+}

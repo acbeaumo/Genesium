@@ -1,0 +1,40 @@
+/* Structure and Layout
+ * ========================================================================== */
+ 
+/* ## Site Containers
+--------------------------------------------- */
+.site-inner,
+.wrap {
+	margin: 0 auto;
+	padding: 0 5%;
+	max-width: 800px;
+	@include breakpoint($bp-medium) {
+		padding: 0;
+	}
+	@include breakpoint($bp-large) {
+		max-width: 960px;
+	}
+	@include breakpoint($bp-ultra) {
+		max-width: 1280px;
+	}
+}
+.site-inner {
+	clear: both;
+	word-wrap: break-word;
+}
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+.content-sidebar .content {
+	@include breakpoint($bp-medium) {
+		float: left;
+		width: 72.5%;
+	}
+}
+.content-sidebar .sidebar-primary {
+	@include breakpoint($bp-medium) {
+		float: left;
+		margin-left: 5%;
+		width: 22.5%;
+	}
+}

@@ -1,0 +1,13 @@
+/* Mixins
+   ========================================================================== */
+
+/* 
+ * Creates a media query breakpoint
+ * $width must be in pixels or unitless. Actual media query output is in ems.
+ */
+@mixin breakpoint($width) {
+	$width: -genesium-strip-unit( $width / $base-font-size ) * 1em;
+	@media only screen and (min-width: $width) {
+		@content;
+	}
+}

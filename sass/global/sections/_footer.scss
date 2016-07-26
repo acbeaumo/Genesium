@@ -1,0 +1,99 @@
+/* Footer
+ * ========================================================================== */
+ 
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+.footer-widgets {
+	clear: both;
+	padding: 60px 0;
+	font-size: 16px;
+	color: #ccc;
+	background-color: #fff;
+}
+.footer-widgets .widget-area:nth-last-child(n+2) {
+	margin-bottom: 30px;
+}
+.footer-widgets .widget-title {
+	margin-bottom: 12px;
+	font-size: 20px;
+	color: #fff;
+}
+.footer-widgets a:hover,
+.footer-widgets a:focus {
+	color: #fff;
+}
+.footer-widgets .widget_recent_entries {
+	display: table;
+	margin: 0 auto;
+}
+.footer-widgets .widget_recent_entries .post-date {
+	display: block;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #888;
+}
+@media only screen and (min-width: 74.8em) {
+	.footer-widgets {
+		font-size: 18px;
+	}
+	.footer-widgets .widget-area {
+		float: left;
+		margin-bottom: 0;
+		width: 30%;
+	}
+	.footer-widgets .widget-area:nth-child(n+2) {
+		margin-left: 5%;
+	}
+	.footer-widgets .widget_recent_entries {
+		display: block;
+		margin: 0;
+	}
+}
+
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+.site-footer {
+	padding: 30px 0;
+	text-align: center;
+	font-size: 0;
+	line-height: 1;
+	background-color: #fff;
+}
+.nav-secondary {
+	display: none;
+}
+.nav-secondary .menu-item {
+	padding: 0 15px;
+}
+.nav-secondary .menu-item > a {
+	padding: 0;
+	font-size: 16px;
+	color: #777;
+}
+.nav-secondary .current-menu-item > a {
+	color: #eb610c;
+}
+.nav-secondary .menu-item > a:hover,
+.nav-secondary .menu-item > a:focus {
+	color: #000;
+}
+.site-footer > .wrap > p {
+	margin: 0;
+	font-size: 16px;
+	color: #777;
+}
+@media only screen and (min-width: 38.4em) {
+	.nav-secondary {
+		display: block;
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (min-width: 74.8em) {
+	.nav-secondary {
+		float: right;
+		margin-bottom: 0;
+	}
+	.site-footer > .wrap > p {
+		float: left;
+	}
+}
