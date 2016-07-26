@@ -1,32 +1,43 @@
 var gulp = require('gulp');
 
-gulp.task('compass-watch', function() {
+gulp.task('watch', function() {
 	var compass = require('gulp-compass');
-	return gulp.src('./sass/*.scss')
+	gulp.src('./sass/style.scss')
 		.pipe(compass({
 			task: 'watch',
 			sass: './sass',
-			css: './'
+			css: './dist'
 		}))
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', function() {
+gulp.task('styles', function() {
 	var compass = require('gulp-compass'),
 		postcss = require('gulp-postcss'),
 		autoprefixer = require('autoprefixer'),
-		cleancss = require('gulp-clean-css'),
-		sourcemaps = require('gulp-sourcemaps');
-	return gulp.src('./sass/*.scss')
-		.pipe(sourcemaps.init())
+		cleancss = require('gulp-clean-css');
+	gulp.src('./sass/style.scss')
 		.pipe(compass({
 			sass: './sass',
-			css: './'
+			css: './dist'
 		}))
 		.pipe(postcss([ autoprefixer({
 			browsers: ['last 2 versions']
 		}) ]))
 		.pipe(cleancss())
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest('./dist'));
 });
+
+gulp.task('scripts', function() {
+	var concat = require('gulp-concat'),
+		rename = require('gulp-rename'),
+		uglify = require('gulp-uglify');
+	gulp.src('./scripts/*.js')
+        .pipe(concat('scripts.js'))
+		.pipe(gulp.dest('./dist/js'))
+		.pipe(rename('scripts.min.js'))
+		.pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('default', ['styles', 'scripts']);

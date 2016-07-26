@@ -1,7 +1,9 @@
+dist/js/scripts.min.js
+dist/style.css
+
 node_modules
 npm-debug.log
 
-/*.css
 .sass-cache/
 *.css.map
 
