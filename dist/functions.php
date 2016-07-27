@@ -12,7 +12,7 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 add_action( 'wp_enqueue_scripts', 'genesium_enqueue_scripts_styles' );
 function genesium_enqueue_scripts_styles() {
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,400italic,700,700italic' );
-	wp_enqueue_style( 'dashicons' );
+	wp_enqueue_style('font-awesome', '//opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css');
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/js/scripts.min.js', ['jquery'], '1.0.0', true );
 }
 

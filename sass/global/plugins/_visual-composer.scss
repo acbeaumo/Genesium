@@ -1,0 +1,100 @@
+/* Visual Composer
+ * ========================================================================== */
+
+.vc_row {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.vc_row .vc_inner {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.vc_row.-hero {
+	@include breakpoint($bp-small) {
+		padding-top: 80px;
+		padding-bottom: 50px;
+	}
+	@include breakpoint($bp-medium) {
+		padding-top: 100px;
+		padding-bottom: 70px;
+	}
+	@include breakpoint($bp-large) {
+		padding-top: 120px;
+		padding-bottom: 90px;
+	}
+	@include breakpoint($bp-ultra) {
+		padding-top: 140px;
+		padding-bottom: 110px;
+	}
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+.vc_row.-fixbg {
+	@include breakpoint($bp-large) {
+		background-attachment: fixed;
+	}
+}
+.vc_row.-banner {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+.vc_row .wpb_content_element {
+	margin-bottom: 30px;
+}
+.vc_row.-dark .wpb_content_element {
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.vc_row.-dark a {
+	color: #eb610c;
+}
+.vc_row.-dark a:hover,
+.vc_row.-dark a:focus {
+	color: #fff;
+}
+.vc_row.-dark input[type="text"],
+.vc_row.-dark input[type="password"],
+.vc_row.-dark input[type="email"],
+.vc_row.-dark input[type="url"],
+.vc_row.-dark input[type="tel"],
+.vc_row.-dark input[type="number"],
+.vc_row.-dark input[type="date"],
+.vc_row.-dark textarea,
+.vc_row.-dark select {
+	border-top: 1px solid rgba(0, 0, 0, 0.25);
+	color: #ddd;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+.vc_row.-dark input[type="text"]:focus,
+.vc_row.-dark input[type="password"]:focus,
+.vc_row.-dark input[type="email"]:focus,
+.vc_row.-dark input[type="url"]:focus,
+.vc_row.-dark input[type="tel"]:focus,
+.vc_row.-dark input[type="number"]:focus,
+.vc_row.-dark input[type="date"]:focus,
+.vc_row.-dark textarea:focus,
+.vc_row.-dark select:focus {
+	color: #fff;
+	box-shadow: 0 0 0 2px #fff;
+}
+.vc_row.-dark button,
+.vc_row.-dark input[type="submit"] {
+	color: #fff;
+	background-color: #eb610c;
+}
+.vc_row.-dark button:hover,
+.vc_row.-dark button:focus,
+.vc_row.-dark input[type="submit"]:hover,
+.vc_row.-dark input[type="submit"]:focus {
+	color: #333;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+.vc_row.-dark button:active,
+.vc_row.-dark input[type="submit"]:active {
+	color: #333;
+	background-color: #fff;
+}

@@ -1,6 +1,6 @@
 /* Configuration
-   ========================================================================== */
-   
+ * ========================================================================== */
+
 /* Vertical rhythm
  * http://compass-style.org/reference/compass/typography/vertical_rhythm/
  * http://zellwk.com/blog/compass-vertical-rhythm/
@@ -40,8 +40,11 @@ $base-text-color: #222;
 $primary-color: #eb610c;
 $link-color: $primary-color;
 $link-focus-color: #000;
+$link-focus-outline-color: #ccc;
 $selection-color: #b3d4fc;
+
 $body-background-color: #fff;
+
 $field-text-color: tint($base-text-color, 25);
 $field-focus-text-color: shade($field-text-color, 50);
 $field-background-color: rgba(0, 0, 0, 0.1);
@@ -53,3 +56,16 @@ $button-active-text-color: $button-text-color;
 $button-background-color: $primary-color;
 $button-focus-background-color: #666;
 $button-active-background-color: #333;
+
+
+
+
+/* Primary navigation */
+$nav-primary-toggle-height: 55px;
+$nav-primary-toggle-text-color: $base-text-color;
+$nav-primary-toggle-text-color--focus: #000;
+$nav-primary-toggle-text-color--active: $nav-primary-toggle-text-color--focus;
+$nav-primary-toggle-background-color: #fff;
+$nav-primary-toggle-background-color--focus: #f7f7f7;
+$nav-primary-toggle-background-color--active: $nav-primary-toggle-background-color--focus;
+$nav-primary-background-color: #fff;

@@ -7,35 +7,42 @@
 	Template: genesis
 */
 
+/* Vendor */
 @import "compass";
 
-@import "global/functions";
-
+/* Config */
 @import "global/config";
 @import "project/config";
 
+/* Functions and mixins */
+@import "global/functions";
 @import "global/mixins";
 
+/* Base styles */
 @import "global/normalize";
 @import "global/base";
 @import "global/print";
 
 @import "global/helpers";
 @import "global/common-classes";
-
 @import "global/layout";
-@import "global/widgets";
-@import "global/gallery";
-
-@import "global/gravity-forms";
 
 /* Patterns */
 @import "global/patterns/navigation";
+@import "global/patterns/widgets";
+@import "global/patterns/gallery";
+
+/* Plugins */
+@import "global/plugins/visual-composer";
+@import "global/plugins/gravity-forms";
 
 /* Sections */
 @import "global/sections/header";
 @import "global/sections/content";
 @import "global/sections/footer";
+
+/* Shame... shame... shame... */
+@import "global/shame";
 
 /* Project styles */
 @import "project/style";

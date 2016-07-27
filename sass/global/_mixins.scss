@@ -1,12 +1,15 @@
 /* Mixins
-   ========================================================================== */
+ * ========================================================================== */
 
 /* 
  * Creates a media query breakpoint
  * $width must be in pixels or unitless. Actual media query output is in ems.
  */
 @mixin breakpoint($width) {
-	$width: -genesium-strip-unit( $width / $base-font-size ) * 1em;
+	/* Using 16px as the basis for em. Apparently, ems in media queries 
+	 * relate to the base font size, not the font size of the html element. 
+	 * This seems to be consistent across all modern browsers. */
+	$width: -genesium-strip-unit( $width / 16px ) * 1em;
 	@media only screen and (min-width: $width) {
 		@content;
 	}

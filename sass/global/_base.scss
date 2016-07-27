@@ -44,13 +44,11 @@ a {
 	@include link-colors($link-color, $link-focus-color, $link-focus-color, $link-color, $link-focus-color);
 	text-decoration: none;
 	transition: color 0.1s;
+	&:focus {
+		outline: $link-focus-outline-color solid 1px;
+	}
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#{headings()} {
 	margin: 0 0 rhythm(1);
 	font-family: $heading-font-family;
 	font-weight: 400;
@@ -103,9 +101,6 @@ ol,
 ul {
 	margin: 0 0 rhythm(1);
 	padding: 0;
-}
-li {
-	list-style-type: none;
 }
 hr {
 	display: block;

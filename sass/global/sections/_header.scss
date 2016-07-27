@@ -5,17 +5,12 @@
 ---------------------------------------------------------------------------------------------------- */
 .genesis-skip-link {
 	margin: 0;
+	padding: 0;
 }
-.genesis-skip-link li {
+.genesis-skip-link > li {
 	height: 0;
 	width: 0;
 	list-style: none;
-}
-
-/* Display outline on focus */
-:focus {
-	color: #333;
-	outline: #ccc solid 1px;
 }
 
 /* # Site Header
@@ -30,6 +25,10 @@
 /* ## Title Area
 --------------------------------------------- */
 .title-area {
+	@include breakpoint($bp-large) {
+		float: left;
+		width: 300px;
+	}
 	margin: 0 auto;
 	padding: 10px 0;
 }
@@ -66,22 +65,76 @@
 	display: block;
 	text-indent: -99999px;
 }
-@media only screen and (min-width: 74.8em) {
-	.title-area {
-		float: left;
-		width: 300px;
-	}
-}
 
 /* ## Widget Area
 --------------------------------------------- */
 .site-header .widget-area {
-	display: none;
-}
-@media only screen and (min-width: 74.8em) {
-	.site-header .widget-area {
+	@include breakpoint($bp-large) {
 		display: block;
 		float: right;
 		text-align: right;
 	}
+	display: none;
+}
+
+/* ## Primary Navigation
+--------------------------------------------- */
+#mobile-genesis-nav-primary {
+	padding: 0;
+	width: 100%;
+	height: $nav-primary-toggle-height;
+	color: $nav-primary-toggle-text-color;
+	background-color: $nav-primary-toggle-background-color;
+	&:hover,
+	&:focus {
+		color: $nav-primary-toggle-text-color--focus;
+		background-color: $nav-primary-toggle-background-color--focus;
+	}
+	&:active {
+		color: $nav-primary-toggle-text-color--active;
+		background-color: $nav-primary-toggle-background-color--active;
+	}
+}
+#genesis-nav-primary {
+	@include breakpoint($bp-large) {
+		display: block;
+	}
+	display: none;
+	width: 100%;
+	background-color: $nav-primary-background-color;
+}
+#mobile-genesis-nav-primary.-sticky,
+#genesis-nav-primary.-sticky {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+}
+#genesis-nav-primary.-sticky {
+	@include breakpoint($bp-large) {
+		top: 0;
+	}
+	top: $nav-primary-toggle-height;
+}
+#genesis-nav-primary .genesis-nav-menu > .menu-item {
+	@include breakpoint($bp-large) {
+		display: inline-block;
+	}
+	display: block;
+}
+#genesis-nav-primary .sub-menu {
+	@include breakpoint($bp-large) {
+		position: absolute;
+		padding-left: 0;
+		width: 200px;
+	}
+	position: static;
+	padding-left: 16px;
+	width: auto;
+}
+#genesis-nav-primary .sub-menu .sub-menu {
+	@include breakpoint($bp-large) {
+		margin-top: -($base-line-height + 20px);
+		margin-left: 200px;
+	}
+	margin: 0;
 }

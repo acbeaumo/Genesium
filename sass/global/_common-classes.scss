@@ -1,6 +1,25 @@
 /* Common classes
  * ========================================================================== */
 
+/* ## Float Clearing
+--------------------------------------------- */
+.author-box,
+.clearfix,
+.entry,
+.entry-content,
+.footer-widgets,
+.nav-primary,
+.nav-secondary,
+.pagination,
+.site-container,
+.site-footer,
+.site-header,
+.site-inner,
+.widget,
+.wrap {
+	@include pie-clearfix();
+}
+
 /* ## Screen Reader Text
 --------------------------------------------- */
 .screen-reader-text,

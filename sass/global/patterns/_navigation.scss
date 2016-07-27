@@ -1,152 +1,86 @@
 /* Navigation
  * ========================================================================== */
- 
-/* # Site Navigation
----------------------------------------------------------------------------------------------------- */
+
+/* Navigation */
 .genesis-nav-menu {
+	@include breakpoint($bp-large) {
+		text-align: left;
+	}
 	clear: both;
+	margin: 0;
 	text-align: center;
 	font-size: 0;
 	line-height: 1;
 }
 .genesis-nav-menu .menu-item {
-	position: relative;
 	display: inline-block;
+	position: relative;
 	text-align: left;
+	list-style: none;
 }
-.genesis-nav-menu .menu-item > a {
+.genesis-nav-menu .menu-item a {
 	display: block;
-	padding: 12px 24px;
-	font-size: 16px;
-	color: #777;
-}
-.genesis-nav-menu .current-menu-item > a {
-	color: #eb610c;
-}
-.genesis-nav-menu .menu-item > a:hover,
-.genesis-nav-menu .menu-item > a:focus {
-	color: #000;
+	padding: 12px 18px;
+	@include adjust-font-size-to( $base-font-size );
 }
 .genesis-nav-menu .sub-menu {
 	display: none;
 	position: absolute;
 	z-index: 100;
+	margin: 0;
 	width: 200px;
 }
-.genesis-nav-menu .sub-menu .sub-menu {
-	margin: -38px 0 0 199px;
+.genesis-nav-menu .sub-menu .menu-item {
+	display: block;
 }
-.genesis-nav-menu .sub-menu .menu-item > a {
+.genesis-nav-menu .sub-menu .menu-item a {
+	@include adjust-font-size-to( $base-font-size * 0.9 );
+	padding: 10px 18px;
 	word-wrap: break-word;
-	font-size: 14px;
 	background-color: #fff;
 }
-@media only screen and (min-width: 74.8em) {
-	.genesis-nav-menu {
-		text-align: left;
-	}
-	.genesis-nav-menu .menu-item {
-		display: inline-block;
-	}
-	.genesis-nav-menu .sub-menu .menu-item {
-		display: block;
-	}
+.genesis-nav-menu .sub-menu .sub-menu {
+	margin-top: -($base-line-height + 20px);
+	margin-left: 200px;
 }
 
-/* ## Menu Toggle
---------------------------------------------- */
+/* Menu toggle */
 .menu-toggle,
 .sub-menu-toggle {
+	@include adjust-font-size-to( $base-font-size );
+	@include breakpoint($bp-large) {
+		display: none;
+	}
 	display: block;
-	overflow: hidden;
-	margin: 0 auto;
 	border-width: 0;
-	text-align: center;
-	color: #777;
+	border-radius: 0;
+	color: $base-text-color;
 	background-color: transparent;
 }
 .menu-toggle {
-	position: relative;
-	width: 100%;
-	line-height: 20px;
-	font-weight: 400;
-}
-.menu-toggle::before {
-	margin-right: 6px;
+	padding: 0.75em;
+	&::before {
+		display: inline-block;
+		margin-right: 0.3em;
+		width: auto;
+		height: auto;
+		font-family: "FontAwesome";
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: inherit;
+		content: "\f0c9";
+	}
 }
 .sub-menu-toggle {
 	position: absolute;
 	right: 0;
 	top: 0;
 	padding: 10px;
-}
-.menu-toggle:hover,
-.menu-toggle:focus,
-.sub-menu-toggle:hover,
-.sub-menu-toggle:focus {
-	color: #000;
-	background-color: #f7f7f7;
-}
-.sub-menu-toggle.activated::before {
-	content: "\f142";
-}
-@media only screen and (min-width: 74.8em) {
-	.menu-toggle,
-	.sub-menu-toggle {
-		display: none;
+	&::before {
+		font-family: "FontAwesome";
+		content: "\f0d7";
 	}
-}
-
-/* ## Primary Navigation
---------------------------------------------- */
-#mobile-genesis-nav-primary {
-	border: 1px solid #eee;
-	border-width: 1px 0;
-}
-#mobile-genesis-nav-primary.activated {
-	border-bottom-color: transparent;
-}
-.nav-primary {
-	display: none;
-	border-bottom: 1px solid #eee;
-}
-.nav-primary .menu-item {
-	display: block;
-}
-.nav-primary .sub-menu {
-	position: static;
-	padding-left: 12px;
-	width: 100%;
-}
-.nav-primary .sub-menu .sub-menu {
-	margin: 0;
-}
-@media only screen and (min-width: 74.8em) {
-	.nav-primary {
-		display: block;
-		border-bottom-width: 0;
-	}
-	.nav-primary .menu-item {
-		display: inline-block;
-	}
-	.nav-primary .menu-item > a {
-		padding: 19px 26px;
-	}
-	.nav-primary .menu-item > a:hover,
-	.nav-primary .menu-item > a:focus {
-		background-color: #f7f7f7;
-	}
-	.nav-primary .sub-menu {
-		position: absolute;
-		border: 1px solid #eee;
-		border-width: 1px 0;
-		padding-left: 0;
-		width: 200px;
-	}
-	.nav-primary .sub-menu .sub-menu {
-		margin: -38px 0 0 199px;
-	}
-	.nav-primary .sub-menu .menu-item > a {
-		padding: 12px 26px;
+	&.activated::before {
+		content: "\f0d8";
 	}
 }
