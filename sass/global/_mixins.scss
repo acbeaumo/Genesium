@@ -3,14 +3,24 @@
 
 /* 
  * Creates a media query breakpoint
- * $width must be in pixels or unitless. Actual media query output is in ems.
  */
-@mixin breakpoint($width) {
+@mixin breakpoint($point) {
+	$breakpoints: () !default;
 	/* Using 16px as the basis for em. Apparently, ems in media queries 
-	 * relate to the base font size, not the font size of the html element. 
-	 * This seems to be consistent across all modern browsers. */
-	$width: -genesium-strip-unit( $width / 16px ) * 1em;
+	* relate to the base font size, not the font size of the html element. 
+	* This seems to be consistent across all modern browsers. */
+	$width: -gen-strip-unit( map-get($breakpoints, $point) / 16px ) * 1em;
 	@media only screen and (min-width: $width) {
 		@content;
 	}
+}
+
+/* 
+ * Outputs font-size and line height based on the modular scale
+ */
+@mixin modular-scale($level, $line-height: false) {
+	$modular-scale: () !default;
+	$level: map-get($modular-scale, $level);
+	font-size: nth($level, 1);
+	line-height: if($line-height != false, $line-height, nth($level, 2));
 }

@@ -16,25 +16,18 @@
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-	background-color: #fff;
-}
-.site-header > .wrap {
-	padding: 20px 0;
+	padding: 1.2rem 0;
+	background-color: $header-background-color;
 }
 
 /* ## Title Area
 --------------------------------------------- */
 .title-area {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		float: left;
-		width: 300px;
 	}
 	margin: 0 auto;
-	padding: 10px 0;
-}
-.header-image .title-area {
-	padding: 0;
-	max-width: 238px;
+	width: $header-logo-width;
 }
 .site-title {
 	margin: 0;
@@ -48,9 +41,12 @@
 	color: #333;
 }
 .header-image .site-title > a {
+	@include breakpoint("large") {
+		background-position: left center !important;
+	}
 	float: left;
-	width: 100%;
-	min-height: 80px;
+	width: $header-logo-width;
+	height: $header-logo-height;
 	background-position: center !important;
 	background-size: contain !important;
 }
@@ -69,7 +65,7 @@
 /* ## Widget Area
 --------------------------------------------- */
 .site-header .widget-area {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		display: block;
 		float: right;
 		text-align: right;
@@ -82,21 +78,18 @@
 #mobile-genesis-nav-primary {
 	padding: 0;
 	width: 100%;
-	height: $nav-primary-toggle-height;
+	height: $nav-primary-height;
 	color: $nav-primary-toggle-text-color;
 	background-color: $nav-primary-toggle-background-color;
 	&:hover,
-	&:focus {
+	&:focus,
+	&:active {
 		color: $nav-primary-toggle-text-color--focus;
 		background-color: $nav-primary-toggle-background-color--focus;
 	}
-	&:active {
-		color: $nav-primary-toggle-text-color--active;
-		background-color: $nav-primary-toggle-background-color--active;
-	}
 }
 #genesis-nav-primary {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		display: block;
 	}
 	display: none;
@@ -110,31 +103,80 @@
 	z-index: 9999;
 }
 #genesis-nav-primary.-sticky {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		top: 0;
 	}
-	top: $nav-primary-toggle-height;
+	top: $nav-primary-height;
 }
 #genesis-nav-primary .genesis-nav-menu > .menu-item {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		display: inline-block;
 	}
 	display: block;
 }
+#genesis-nav-primary .genesis-nav-menu > .menu-item > a {
+	@include breakpoint("large") {
+		padding: 0 1rem;
+		line-height: $nav-primary-height;
+	}
+}
+#genesis-nav-primary .menu-item a {
+	@include breakpoint("large") {
+		border-top: none;
+	}
+	border-top: 1px solid $nav-primary-border-color;
+	color: $nav-primary-link-color;
+	transition: background-color 0.3s, color 0.3s;
+	&:hover,
+	&:focus {
+		color: $nav-primary-link-color--focus;
+		background-color: $nav-primary-background-color--secondary;
+	}
+}
+#genesis-nav-primary .menu-item.current-menu-item > a {
+	color: $nav-primary-link-color--current;
+	&:hover,
+	&:focus {
+		color: $nav-primary-link-color--focus;
+		background-color: $nav-primary-background-color--secondary;
+	}
+}
+#genesis-nav-primary .sub-menu-toggle {
+	top: 1px;
+	color: $nav-primary-link-color;
+	background-color: transparent;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $nav-primary-toggle-text-color--focus;
+		background-color: $nav-primary-background-color--secondary;
+	}
+}
 #genesis-nav-primary .sub-menu {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		position: absolute;
-		padding-left: 0;
-		width: 200px;
+		width: -gen-rp(200px);
 	}
 	position: static;
-	padding-left: 16px;
 	width: auto;
+	background-color: $nav-primary-background-color;
+}
+#genesis-nav-primary .sub-menu > .menu-item > a {
+	@include breakpoint("large") {
+		padding-left: 1rem;
+	}
+	padding-left: 1.5rem;
 }
 #genesis-nav-primary .sub-menu .sub-menu {
-	@include breakpoint($bp-large) {
-		margin-top: -($base-line-height + 20px);
-		margin-left: 200px;
+	@include breakpoint("large") {
+		margin-top: -(-gen-vr(1) + 1rem);
+		margin-left: -gen-rp(200px);
 	}
 	margin: 0;
+}
+#genesis-nav-primary .sub-menu .sub-menu > .menu-item > a {
+	@include breakpoint("large") {
+		padding-left: 1rem;
+	}
+	padding-left: 2rem;
 }

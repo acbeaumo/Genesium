@@ -13,19 +13,19 @@
 	padding-bottom: 0;
 }
 .vc_row.-hero {
-	@include breakpoint($bp-small) {
+	@include breakpoint("small") {
 		padding-top: 80px;
 		padding-bottom: 50px;
 	}
-	@include breakpoint($bp-medium) {
+	@include breakpoint("medium") {
 		padding-top: 100px;
 		padding-bottom: 70px;
 	}
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		padding-top: 120px;
 		padding-bottom: 90px;
 	}
-	@include breakpoint($bp-ultra) {
+	@include breakpoint("ultra") {
 		padding-top: 140px;
 		padding-bottom: 110px;
 	}
@@ -33,7 +33,7 @@
 	padding-bottom: 30px;
 }
 .vc_row.-fixbg {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		background-attachment: fixed;
 	}
 }
@@ -84,7 +84,7 @@
 .vc_row.-dark button,
 .vc_row.-dark input[type="submit"] {
 	color: #fff;
-	background-color: #eb610c;
+	background-color: $primary-color;
 }
 .vc_row.-dark button:hover,
 .vc_row.-dark button:focus,

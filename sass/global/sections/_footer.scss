@@ -4,17 +4,17 @@
 /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		font-size: 18px;
 	}
 	clear: both;
 	padding: 60px 0;
 	font-size: 16px;
-	color: #ccc;
-	background-color: #fff;
+	color: $footer-widgets-text-color;
+	background-color: $footer-widgets-background-color;
 }
 .footer-widgets .widget-area {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		float: left;
 		margin-bottom: 0;
 		width: 30%;
@@ -36,7 +36,7 @@
 	color: #fff;
 }
 .footer-widgets .widget_recent_entries {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		display: block;
 		margin: 0;
 	}
@@ -57,14 +57,14 @@
 	text-align: center;
 	font-size: 0;
 	line-height: 1;
-	background-color: #fff;
+	background-color: $footer-background-color;
 }
 .nav-secondary {
-	@include breakpoint($bp-small) {
+	@include breakpoint("small") {
 		display: block;
 		margin-bottom: 30px;
 	}
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		float: right;
 		margin-bottom: 0;
 	}
@@ -76,20 +76,20 @@
 .nav-secondary .menu-item > a {
 	padding: 0;
 	font-size: 16px;
-	color: #777;
+	color: $footer-link-color;
 	&:hover,
 	&:focus {
-		color: #000;
+		color: $footer-link-color--focus;
 	}
 }
 .nav-secondary .current-menu-item > a {
-	color: #eb610c;
+	color: $footer-link-color--current;
 }
 .site-footer > .wrap > p {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		float: left;
 	}
 	margin: 0;
 	font-size: 16px;
-	color: #777;
+	color: $footer-text-color;
 }

@@ -17,7 +17,11 @@
 .site-inner,
 .widget,
 .wrap {
-	@include pie-clearfix();
+	&:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
 }
 
 /* ## Screen Reader Text

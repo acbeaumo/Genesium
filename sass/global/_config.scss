@@ -1,71 +1,105 @@
 /* Configuration
  * ========================================================================== */
 
-/* Vertical rhythm
- * http://compass-style.org/reference/compass/typography/vertical_rhythm/
- * http://zellwk.com/blog/compass-vertical-rhythm/
- */
-$base-font-size: 18px;
-$base-line-height: 28px;
-$relative-font-sizing: false;
-$rhythm-unit: "rem";
-//$round-to-nearest-half-line: true;
-$debug-vertical-alignment: false;
-
 /* Media query breakpoints
  * Values must be in pixels. Use the `breakpoint` mixin to output in ems.
  */
-$bp-small: 384px;
-$bp-small-plus: 566px;
-$bp-medium: 748px;
-$bp-medium-plus: 810px;
-$bp-large: 872px;
-$bp-large-plus: 972px;
-$bp-ultra: 1072px;
-$bp-ultra-plus: 1176px;
-$bp-mega: 1280px;
+$breakpoints: (
+	small: 384px,
+	small-plus: 566px,
+	medium: 748px,
+	medium-plus: 810px,
+	large: 872px,
+	large-plus: 972px,
+	ultra: 1072px,
+	ultra-plus: 1176px,
+	mega: 1280px
+);
+
+/* Responsive type
+ * http://madebymike.com.au/writing/precise-control-responsive-typography/
+ */
+$scaling-min-font-size: 14px;
+$scaling-max-font-size: 22px;
+$scaling-min-breakpoint: "small";
+$scaling-max-breakpoint: "ultra";
+$base-line-height: 1.556;
+
+/* Modular scale - 16px, 18px (1.333)
+ * http://www.modularscale.com/?16,18&px&1.333&sass&text
+ */
+$modular-scale: (
+	-2: (0.75rem, -gen-vr(0.5)),
+	-1: (0.844rem, -gen-vr(1)),
+	0: (1rem, -gen-vr(1)),
+	1: (1.125rem, -gen-vr(1)),
+	2: (1.333rem, -gen-vr(1)),
+	3: (1.5rem, -gen-vr(1.5)),
+	4: (1.777rem, -gen-vr(1.5)),
+	5: (1.999rem, -gen-vr(1.5)),
+	6: (2.369rem, -gen-vr(1.5)),
+	7: (2.665rem, -gen-vr(2)),
+	8: (3.157rem, -gen-vr(2))
+);
 
 /* Fonts */
 $base-font-family: "Lato", sans-serif;
 $heading-font-family: "Montserrat", sans-serif;
-$h1-font-size: 36px;
-$h2-font-size: 30px;
-$h3-font-size: 24px;
-$h4-font-size: 20px;
-$h5-font-size: 18px;
-$h6-font-size: 16px;
 
 /* Colors */
+$background-color: #fff;
+$background-color--secondary: #f0f0f0;
 $base-text-color: #222;
-$primary-color: #eb610c;
+$primary-color: #3ec1e7;
+
+/* Links */
 $link-color: $primary-color;
-$link-focus-color: #000;
-$link-focus-outline-color: #ccc;
+$link-color--focus: #000;
+$link-outline-color--focus: #ccc;
 $selection-color: #b3d4fc;
 
-$body-background-color: #fff;
-
-$field-text-color: tint($base-text-color, 25);
-$field-focus-text-color: shade($field-text-color, 50);
-$field-background-color: rgba(0, 0, 0, 0.1);
-$field-inset-shadow-color: rgba(0, 0, 0, 0.25);
-$field-focus-outline-color: rgba(0, 0, 0, 0.35);
+/* Forms */
+$field-text-color: mix(#fff, $base-text-color, 25%);
+$field-text-color--focus: mix(#000, $field-text-color, 50%);
+$field-background-color: rgba(#000, 0.1);
+$field-inset-shadow-color: rgba(#000, 0.25);
+$field-outline-color--focus: rgba(#000, 0.35);
 $button-text-color: #fff;
-$button-focus-text-color: $button-text-color;
-$button-active-text-color: $button-text-color;
+$button-text-color--focus: $button-text-color;
+$button-text-color--active: $button-text-color;
 $button-background-color: $primary-color;
-$button-focus-background-color: #666;
-$button-active-background-color: #333;
+$button-background-color--focus: #666;
+$button-background-color--active: #333;
 
-
-
+/* Header */
+$header-background-color: #fff;
+$header-logo-width: -gen-rp(238px);
+$header-logo-height: -gen-rp(80px);
 
 /* Primary navigation */
-$nav-primary-toggle-height: 55px;
-$nav-primary-toggle-text-color: $base-text-color;
-$nav-primary-toggle-text-color--focus: #000;
-$nav-primary-toggle-text-color--active: $nav-primary-toggle-text-color--focus;
-$nav-primary-toggle-background-color: #fff;
-$nav-primary-toggle-background-color--focus: #f7f7f7;
-$nav-primary-toggle-background-color--active: $nav-primary-toggle-background-color--focus;
+$nav-primary-height: 3rem;
+$nav-primary-item-height: 2.5rem;
 $nav-primary-background-color: #fff;
+$nav-primary-background-color--secondary: #f0f0f0;
+$nav-primary-border-color: #ddd;
+$nav-primary-link-color: $base-text-color;
+$nav-primary-link-color--focus: $link-color--focus;
+$nav-primary-link-color--current: $primary-color;
+$nav-primary-toggle-text-color: $nav-primary-link-color;
+$nav-primary-toggle-text-color--focus: $nav-primary-link-color--focus;
+$nav-primary-toggle-background-color: $nav-primary-background-color;
+$nav-primary-toggle-background-color--focus: $nav-primary-background-color--secondary;
+
+/* Footer widgets */
+$footer-widgets-background-color: #fff;
+$footer-widgets-text-color: $base-text-color;
+$footer-widgets-link-color: $link-color;
+$footer-widgets-link-color--focus: $link-color--focus;
+$footer-widgets-link-color--current: $primary-color;
+
+/* Footer */
+$footer-background-color: #fff;
+$footer-text-color: $base-text-color;
+$footer-link-color: $link-color;
+$footer-link-color--focus: $link-color--focus;
+$footer-link-color--current: $primary-color;

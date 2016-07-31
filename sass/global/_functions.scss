@@ -6,9 +6,29 @@
  * @param {Number} $number - Number to remove unit from
  * @return {Number} - Unitless number
  */
-@function -genesium-strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
-  }
-  @return $number;
+@function -gen-strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+	@return $number;
+}
+
+/* Responsive pixels
+ * Converts pixels to rems based on the responsive font size
+ * @param {Number} $pixels - Number in pixels
+ * @return {Number} - Rems
+ */
+@function -gen-rp($pixels) {
+	$scaling-min-font-size: 16px !default;
+	$scaling-max-font-size: 16px !default;
+	@return -gen-strip-unit( $pixels / ( ($scaling-min-font-size + $scaling-max-font-size) / 2 ) ) + 0rem;
+}
+
+/* Vertical rhythm
+ * Calculates rhythm units
+ * @param {Number} $lines - Number of lines
+ * @return {Number} - Rems
+ */
+@function -gen-vr($lines) {
+	@return $base-line-height * $lines + 0rem;
 }

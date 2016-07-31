@@ -13,40 +13,28 @@
 	text-align: right;
 }
 ._text-xs {
-	@include adjust-font-size-to( $base-font-size * 0.85 );
-	@include breakpoint($bp-large) {
-		@include adjust-font-size-to( $base-font-size * 0.9 );
-	}
+	@include modular-scale(-2);
 }
 ._text-s {
-	@include adjust-font-size-to( $base-font-size * 0.9 );
-	@include breakpoint($bp-large) {
-		@include adjust-font-size-to( $base-font-size );
-	}
+	@include modular-scale(-1);
+}
+._text-m {
+	@include modular-scale(0);
 }
 ._text-l {
-	@include adjust-font-size-to( $base-font-size * 1.1 );
-	@include breakpoint($bp-large) {
-		@include adjust-font-size-to( $base-font-size * 1.15 );
-	}
+	@include modular-scale(1);
 }
 ._text-xl {
-	@include adjust-font-size-to( $base-font-size * 1.25 );
-	@include breakpoint($bp-large) {
-		@include adjust-font-size-to( $base-font-size * 1.5 );
-	}
+	@include modular-scale(2);
 }
 ._text-xxl {
-	@include adjust-font-size-to( $base-font-size * 1.5 );
-	@include breakpoint($bp-large) {
-		@include adjust-font-size-to( $base-font-size * 2 );
-	}
+	@include modular-scale(3);
 }
 ._text-xxxl {
-	@include adjust-font-size-to( $base-font-size * 2 );
-	@include breakpoint($bp-large) {
-		@include adjust-font-size-to( $base-font-size * 2.5 );
-	}
+	@include modular-scale(4);
+}
+._text-xxxxl {
+	@include modular-scale(6);
 }
 ._text-uppercase {
 	text-transform: uppercase;

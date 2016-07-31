@@ -8,14 +8,16 @@
 */
 
 /* Vendor */
-@import "compass";
+
+
+/* Functions */
+@import "global/functions";
 
 /* Config */
 @import "global/config";
 @import "project/config";
 
-/* Functions and mixins */
-@import "global/functions";
+/* Mixins */
 @import "global/mixins";
 
 /* Base styles */

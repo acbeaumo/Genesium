@@ -3,7 +3,7 @@
 
 /* Navigation */
 .genesis-nav-menu {
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		text-align: left;
 	}
 	clear: both;
@@ -20,40 +20,39 @@
 }
 .genesis-nav-menu .menu-item a {
 	display: block;
-	padding: 12px 18px;
-	@include adjust-font-size-to( $base-font-size );
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	line-height: -gen-vr(1);
 }
 .genesis-nav-menu .sub-menu {
 	display: none;
 	position: absolute;
 	z-index: 100;
 	margin: 0;
-	width: 200px;
+	width: -gen-rp(200px);
 }
 .genesis-nav-menu .sub-menu .menu-item {
 	display: block;
 }
 .genesis-nav-menu .sub-menu .menu-item a {
-	@include adjust-font-size-to( $base-font-size * 0.9 );
-	padding: 10px 18px;
+	font-size: 0.9rem;
 	word-wrap: break-word;
-	background-color: #fff;
 }
 .genesis-nav-menu .sub-menu .sub-menu {
-	margin-top: -($base-line-height + 20px);
-	margin-left: 200px;
+	margin-top: -(-gen-vr(1) + 1rem);
+	margin-left: -gen-rp(200px);
 }
 
 /* Menu toggle */
 .menu-toggle,
 .sub-menu-toggle {
-	@include adjust-font-size-to( $base-font-size );
-	@include breakpoint($bp-large) {
+	@include breakpoint("large") {
 		display: none;
 	}
 	display: block;
 	border-width: 0;
 	border-radius: 0;
+	font-size: 1rem;
 	color: $base-text-color;
 	background-color: transparent;
 }
@@ -75,7 +74,9 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	padding: 10px;
+	padding: 0;
+	width: -gen-vr(1) + 1rem;
+	height: -gen-vr(1) + 1rem;
 	&::before {
 		font-family: "FontAwesome";
 		content: "\f0d7";

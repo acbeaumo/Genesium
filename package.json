@@ -14,13 +14,13 @@
   },
   "homepage": "https://github.com/acbeaumo/Genesium#readme",
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "cssnano": "^3.7.3",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-clean-css": "^2.0.11",
-    "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.4"
   }
 }
