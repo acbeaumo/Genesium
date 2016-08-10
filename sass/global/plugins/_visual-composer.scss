@@ -2,35 +2,22 @@
  * ========================================================================== */
 
 .vc_row {
-	padding-top: 60px;
-	padding-bottom: 30px;
+	padding-top: -gen-vr(2);
+	padding-bottom: -gen-vr(1);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+.type-page > .entry-header + .entry-content > .vc_row:first-child {
+	padding-top: 0;
 }
 .vc_row .vc_inner {
 	padding-top: 0;
 	padding-bottom: 0;
 }
 .vc_row.-hero {
-	@include breakpoint("small") {
-		padding-top: 80px;
-		padding-bottom: 50px;
-	}
-	@include breakpoint("medium") {
-		padding-top: 100px;
-		padding-bottom: 70px;
-	}
-	@include breakpoint("large") {
-		padding-top: 120px;
-		padding-bottom: 90px;
-	}
-	@include breakpoint("ultra") {
-		padding-top: 140px;
-		padding-bottom: 110px;
-	}
-	padding-top: 60px;
-	padding-bottom: 30px;
+	padding-top: -gen-vr(4);
+	padding-bottom: -gen-vr(3);
 }
 .vc_row.-fixbg {
 	@include breakpoint("large") {
@@ -38,12 +25,14 @@
 	}
 }
 .vc_row.-banner {
-	padding-top: 60px;
-	padding-bottom: 30px;
 	text-align: center;
 }
+.vc_row.-nopad {
+	padding-top: 0;
+	padding-bottom: 0;
+}
 .vc_row .wpb_content_element {
-	margin-bottom: 30px;
+	margin-bottom: -gen-vr(1);
 }
 .vc_row.-dark .wpb_content_element {
 	color: #fff;
@@ -65,7 +54,6 @@
 .vc_row.-dark input[type="date"],
 .vc_row.-dark textarea,
 .vc_row.-dark select {
-	border-top: 1px solid rgba(0, 0, 0, 0.25);
 	color: #ddd;
 	background-color: rgba(255, 255, 255, 0.25);
 }

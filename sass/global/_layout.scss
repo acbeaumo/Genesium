@@ -7,7 +7,7 @@
 .wrap {
 	margin: 0 auto;
 	padding: 0 5%;
-	max-width: 1280px;
+	max-width: 56rem;
 }
 .site-inner {
 	clear: both;
@@ -17,13 +17,13 @@
 /* ## Column Widths and Positions
 --------------------------------------------- */
 .content-sidebar .content {
-	@include breakpoint("medium") {
+	@include breakpoint("large") {
 		float: left;
 		width: 72.5%;
 	}
 }
 .content-sidebar .sidebar-primary {
-	@include breakpoint("medium") {
+	@include breakpoint("large") {
 		float: left;
 		margin-left: 5%;
 		width: 22.5%;

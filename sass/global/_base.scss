@@ -76,7 +76,7 @@ dl {
 }
 ol,
 ul {
-	margin: 0 0 -gen-vr(1);
+	margin: 0 0 -gen-vr(1) -gen-vr(1);
 	padding: 0;
 }
 hr {
@@ -129,12 +129,15 @@ input[type="url"],
 input[type="tel"],
 input[type="number"],
 input[type="date"],
+input[type="search"],
 textarea,
 select {
 	@include modular-scale(-1);
+	box-sizing: border-box;
 	border: none;
 	border-radius: 5px;
-	padding: 0.5rem 1rem;
+	padding: -gen-vr(0.25) -gen-vr(0.5);
+	max-width: 100%;
 	color: $field-text-color;
 	background-color: $field-background-color;
 	box-shadow: 0 1px 0 0 $field-inset-shadow-color inset;
@@ -154,11 +157,12 @@ input[type="submit"] {
 	@include modular-scale(-1);
 	border: none;
 	border-radius: 5px;
-	padding: 0.5rem 1rem;
+	padding: -gen-vr(0.25) -gen-vr(0.5);
 	text-transform: uppercase;
 	color: $button-text-color;
 	background-color: $button-background-color;
 	transition: color 0.3s, background-color 0.3s;
+	cursor: pointer;
 	&:hover,
 	&:focus {
 		color: $button-text-color--focus;

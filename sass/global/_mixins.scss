@@ -22,5 +22,5 @@
 	$modular-scale: () !default;
 	$level: map-get($modular-scale, $level);
 	font-size: nth($level, 1);
-	line-height: if($line-height != false, $line-height, nth($level, 2));
+	line-height: if($line-height != false, -gen-vr($line-height), nth($level, 2));
 }

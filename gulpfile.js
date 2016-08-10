@@ -1,6 +1,8 @@
 'use strict';
 
 var gulp = require('gulp');
+var argv = require('yargs').argv;
+var gulpif = require('gulp-if');
 var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
 var autoprefixer = require('autoprefixer');
@@ -13,27 +15,28 @@ gulp.task('styles', function() {
 	var processors = [
 		autoprefixer({
 			'browsers': ['last 2 versions']
-		}),
-		cssnano({
+		})
+	];
+	if (argv.min) {
+		processors.push( cssnano({
 			'discardUnused': false,
 			'mergeIdents': false,
 			'reduceIdents': false,
 			'zindex': false
-		})
-	];
+		}) );
+	}
 	return gulp.src('./sass/**/*.scss')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(postcss(processors))
-		.pipe(gulp.dest('./dist'));
+		.pipe( sass().on('error', sass.logError) )
+		.pipe( rename('style.css') )
+		.pipe( postcss(processors) )
+		.pipe( gulp.dest('./dist') );
 });
 
 gulp.task('scripts', function() {
-	gulp.src('./scripts/**/*.js')
-        .pipe(concat('scripts.js'))
-		.pipe(gulp.dest('./dist/js'))
-		.pipe(rename('scripts.min.js'))
-		.pipe(uglify())
-        .pipe(gulp.dest('./dist/js'));
+	return gulp.src('./scripts/**/*.js')
+        .pipe( concat('scripts.js') )
+		.pipe( gulpif( argv.min, uglify() ) )
+        .pipe( gulp.dest('./dist/js') );
 });
 
 gulp.task('watch', function() {

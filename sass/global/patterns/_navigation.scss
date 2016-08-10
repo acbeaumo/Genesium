@@ -53,6 +53,8 @@
 	border-width: 0;
 	border-radius: 0;
 	font-size: 1rem;
+	line-height: -gen-vr(1);
+	font-weight: 400;
 	color: $base-text-color;
 	background-color: transparent;
 }
@@ -79,6 +81,9 @@
 	height: -gen-vr(1) + 1rem;
 	&::before {
 		font-family: "FontAwesome";
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: inherit;
 		content: "\f0d7";
 	}
 	&.activated::before {

@@ -20,7 +20,7 @@ $breakpoints: (
  * http://madebymike.com.au/writing/precise-control-responsive-typography/
  */
 $scaling-min-font-size: 14px;
-$scaling-max-font-size: 22px;
+$scaling-max-font-size: 24px;
 $scaling-min-breakpoint: "small";
 $scaling-max-breakpoint: "ultra";
 $base-line-height: 1.556;
@@ -95,7 +95,6 @@ $footer-widgets-background-color: #fff;
 $footer-widgets-text-color: $base-text-color;
 $footer-widgets-link-color: $link-color;
 $footer-widgets-link-color--focus: $link-color--focus;
-$footer-widgets-link-color--current: $primary-color;
 
 /* Footer */
 $footer-background-color: #fff;

@@ -126,13 +126,13 @@
 
 /* ## Titles
 --------------------------------------------- */
+.entry-title {
+	margin: -gen-vr(1) 0;
+}
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
 	font-size: 20px;
-}
-.entry-title {
-	font-size: 36px;
 }
 .entry-title a,
 .sidebar .widget-title a {
